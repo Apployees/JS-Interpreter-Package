@@ -1,6 +1,6 @@
 {
-  "name": "js-interpreter",
-  "version": "2.2.0",
+  "name": "@apployees/js-interpreter",
+  "version": "2.2.1",
   "description": "NPM package for https://github.com/NeilFraser/JS-Interpreter",
   "main": "lib/js-interpreter.min.js",
   "module": "lib/js-interpreter.js",
@@ -9,6 +9,7 @@
       "lib"
   ],
   "scripts": {
+    "preinstall": "git submodule update --init --recursive",
     "build": "webpack --config webpack.config.js",
     "syntax": "eslint src",
     "prepublish": "webpack && npm run build"
