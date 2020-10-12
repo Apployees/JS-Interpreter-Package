@@ -1,6 +1,6 @@
 {
   "name": "@apployees/js-interpreter",
-  "version": "2.2.1",
+  "version": "2.2.3",
   "description": "NPM package for https://github.com/NeilFraser/JS-Interpreter",
   "main": "lib/js-interpreter.min.js",
   "module": "lib/js-interpreter.js",
@@ -9,21 +9,20 @@
       "lib"
   ],
   "scripts": {
-    "preinstall": "git submodule update --init --recursive",
-    "build": "webpack --config webpack.config.js",
+    "build": "git submodule update --init --recursive && webpack --config webpack.config.js",
     "syntax": "eslint src",
-    "prepublish": "webpack && npm run build"
+    "prepublish": "webpack && yarn build"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/aminmarashi/JS-Interpreter.git"
+    "url": "git+https://github.com/Apployees/JS-Interpreter-Package.git"
   },
-  "author": "Amin Marashi",
+  "author": "Apployees",
   "license": "Apache-2.0",
   "bugs": {
-    "url": "https://github.com/aminmarashi/JS-Interpreter/issues"
+    "url": "https://github.com/Apployees/JS-Interpreter-Package/issues"
   },
-  "homepage": "https://github.com/aminmarashi/JS-Interpreter#readme",
+  "homepage": "https://github.com/Apployees/JS-Interpreter-Package#readme",
   "devDependencies": {
     "eslint": "^6.8.0",
     "eslint-config-airbnb-base": "^14.0.0",
